@@ -1,3 +1,4 @@
+import Header from '../components/sections/Header'
 import Hero from '../components/sections/Hero'
 import Benefits from '../components/sections/Benefits'
 import Facilities from '../components/sections/Facilities'
@@ -8,6 +9,7 @@ import Footer from '../components/sections/Footer'
 const Landing = () => {
   return (
     <main className="min-h-screen">
+      <Header />
       <Hero />
       <Benefits />
       <Facilities />

@@ -1,29 +1,15 @@
-const Button = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
-  ...props 
-}) => {
-  const baseStyles = 'font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
-  
+const Button = ({ variant = "primary", children, className = "", ...props }) => {
+  const base =
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold transition";
+
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
-  }
-  
-  const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
-  }
+    primary: "bg-premium-pink text-white hover:bg-pink-hover",
+    secondary: "border border-premium-pink text-premium-pink hover:bg-pink-subtle",
+    ghost: "text-premium-pink hover:bg-pink-subtle",
+  };
 
   return (
-    <button 
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
-    >
+    <button className={`${base} ${variants[variant]} ${className}`} {...props}>
       {children}
     </button>
   )
