@@ -30,6 +30,10 @@ export default {
         'btn': '40px',
       },
     },
+    container: { 
+      center: true, 
+      padding: { DEFAULT: "16px", md: "24px", lg: "32px" } 
+    },
   },
   plugins: [],
 };
